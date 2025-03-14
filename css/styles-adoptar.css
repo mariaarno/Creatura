@@ -1,0 +1,212 @@
+/* Estilos adoptar */
+
+:root {
+    --main-color-1: #243396;
+    --main-color-2: #E2AE3E;
+    --second-color-1: #FFEDAA;
+    --second-color-2: #fbf6e3;
+    --soft-grey: #C7C7C7;
+    --dark-grey: #9a9a9a;
+}
+
+/* Botones adoptar */
+.botones-adoptar {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 10px;
+    }
+    li a {
+        border: 2px solid black;
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+        transition: 0.3s;
+    }
+}
+
+.botones-adoptar ul li a:hover {
+    background-color:var(--main-color-1);
+    border: 2px solid var(--main-color-1);
+    color: white;
+}
+
+
+/* Carrusel fichas */
+.carrusel-fichajes {
+    margin-bottom: 100px;
+    padding: 10px 200px;
+    h2 {
+        margin-bottom: 50px;
+    }
+}
+
+.slider {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.slider-container {
+    display: flex;
+    width: 150%;
+    gap: 20px;
+}
+
+
+/* Estilo general de la ficha */
+.ficha {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.ficha:hover {
+    transform: translateY(-15px);
+}
+
+
+/* Imagen de fondo */
+.ficha-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Estilos textos */
+.texto-adoptar {
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-bottom: 100px;
+
+    h2 {
+        margin-bottom: 50px;
+        font-size: 3rem;
+    }
+}
+
+.contenedor-texto {
+    display: flex;
+    gap: 30px;
+
+    p {
+        flex: 1; 
+        text-align: left;
+        margin: 0;
+        font-family: 'Benton-Regular';
+        mark {
+            background-color: var(--second-color-1);
+        }
+    }
+}
+
+
+/* ¿Por qué es importante adoptar?  */
+.texto-adoptar2 {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px 40px;
+    margin-bottom: 80px;
+    background:var(--second-color-1);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Benton-Regular';
+    h2{
+        font-family: 'Benton-Medium';
+        font-size: 3rem;
+        margin-top: 30px;
+
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        background: #fff;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+    h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-family: 'Benton-Medium';
+    }
+    p {
+        text-align: left;
+    }
+}
+
+/* FaQ */
+
+.faq {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 200px;;
+    h2 {
+        text-align: left;
+        font-size: 3rem;
+        margin-bottom: 80px;
+        font-family: 'Benton-Medium';
+    }
+   
+}
+
+.faq-item {
+    border-radius: 50px;
+    padding: 15px;
+    overflow: hidden;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--main-color-1);
+}
+
+.faq-question {
+    max-width: 100%;
+    padding: 20px;
+    color: white;
+    font-size: 2.2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.5s;
+    display: block; /* Asegura que ocupa toda la anchura */
+}
+
+.faq-answer {
+    max-height: 0; /* desplegable cerrado */
+    overflow: hidden;
+    background-color: var(--main-color-1);
+    color: white;
+    padding: 0 40px;
+    border-radius: 0 0 30px 30px;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    font-family: 'Benton-Regular';
+    line-height: 1.6;
+}
+
+/* Cuando el botón está activo, se muestra la respuesta */
+.faq-item:has(:checked) .faq-answer {
+    max-height: 400px;
+    padding: 40px;
+}
+
+/* Ocultar el input checkbox */
+.faq-button {
+    display: none;
+}
+

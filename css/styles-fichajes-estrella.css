@@ -1,0 +1,36 @@
+:root {
+    --main-color-1: #243396;
+    --main-color-2: #E2AE3E;
+    --second-color-1: #FFEDAA;
+    --second-color-2: #fbf6e3;
+    --soft-grey: #C7C7C7;
+    --dark-grey: #9a9a9a;
+}
+
+
+
+
+
+
+/* LIKE */
+.heart-icon2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+}
+  
+.heart-icon2.liked {
+color: white
+}
+
+
+
+
+
+
+
+

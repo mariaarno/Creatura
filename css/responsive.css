@@ -1,0 +1,318 @@
+/* MEDIA QUERIES 640 */
+@media only screen and (max-width: 1024px) {
+
+    .main-container {
+        padding: 0 20px;
+    }
+
+    /* NAV */
+    .nav-desktop {
+        display: none;
+    }
+
+    #app {
+        display: block;
+    }
+
+    .main-header {
+        gap: 20px;
+        padding: 30px;
+        .logo {
+            margin-right: 210px;
+        }
+    }
+
+    .menu {
+        width: 80%;
+    }
+
+    /* HOME */
+    /* Hero */
+    .hero-title {
+        max-width: 100%;
+    }
+    .hero {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-grid {
+        margin-top: 50px;
+        max-width: 100%;
+    }
+
+    /* Objetivos */
+    .objetivos {
+        text-align: left;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .objetivos-container {
+        gap: 10px;
+    }
+
+    .objetivo-texto {
+        font-size: 1rem;
+        margin-bottom: 100px;
+    }
+
+    .circulo {
+        width: 120px;
+        height: 120px;
+        font-size: 0.9rem;
+    }
+
+    /* Mapa Home */
+    .section-container-home {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 50px;
+        h2 {
+            font-size: 3rem;
+            margin-top: 50px;
+        }
+    }
+
+    .map-container-home {
+        height: 400px;
+    }
+
+    /* Fichajes */
+
+    .fichaje-container {
+        width: 100%;
+        flex-direction: column;
+        img {
+            width: 100%;
+        }
+    }
+
+    .card-animal {
+        margin-bottom: 200px;
+    }
+
+    /* Historias que dejan huella */
+    .historias-huella {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bg-historias-huella {
+        padding: 0 20px;
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+
+    .historia-mango {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* ADOPTAR */
+    .texto-adoptar {
+        max-width: 100%;
+        margin-top: 30px;
+
+    }
+
+    .contenedor-texto {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .texto-adoptar2 {
+        margin-bottom: 80px;
+    }
+
+    .faq {
+        max-width: 100%;
+        margin-bottom: 100px;
+    }
+
+    .faq-question {
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: left;
+
+    }
+
+    .faq-answer {
+        padding: 0 15px;
+    }
+
+
+    .faq-item:has(:checked) .faq-answer {
+        max-height: 800px;
+        padding: 0 15px;
+    }
+
+    /* VER TODOS */
+    .titulo-gallery {
+        margin: 0 50px;
+    }
+
+
+
+    /* FICHA TÉCNICA */
+    /* Carrusel */
+    .swiper {
+        width: 100%;
+        height: 400px;
+        margin-top: 40px;
+    }
+
+    /* Informació */
+    .info-principal {
+        width: 100%;
+    }
+
+    .iconos-share-like {
+        justify-content: right;
+        font-size: 2rem;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .grupo-etiquetas {
+        width: 100%;
+    }
+
+    .tags-info {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .tags-grup {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .descripcion-animal {
+        width: 100%;
+    }
+    .texto-descripcion {
+        display: block;
+        line-height: 1.6;
+        font-family: 'Benton-Regular';
+        width: 100%;
+
+    }
+
+    /* Mapa */
+    .section-container-ficha {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .mapa-protectora {
+        display: block;
+    }
+
+    h2 {
+        grid-column: span 2; /* Ocupar toda la fila superior */
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .map-container {
+        width: 100%;
+        height: 400px;
+        border-radius: 20px;
+        
+    }
+    .map-container-ficha {
+        width: 100%;
+        height: 400px;
+        border-radius: 20px;
+        
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* Formulario */
+    .section-form {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .formulario-bloque-preguntas {
+        display: block;
+    }
+
+    .formulario-bloque1 {
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    .formulario-bloque2 {
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    .input-texto{
+        width: 95%;
+    }
+
+    .comentario {
+        width: 95%;
+        height: 200px;
+    }
+
+
+    /* Posibles compañeros */
+    .carrusel-fichajes {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+/* FILTROS */
+
+    i {
+        max-width: 470px;
+        margin-bottom: 10px;
+    }
+
+    .filtros {
+        margin: 0 20px;
+        justify-content: space-between;
+        align-content: space-between; 
+        display: block;
+        gap: 80px;
+    }
+    
+    .formulario-bloque1 {
+        width: 100%; 
+    }
+    
+    .formulario-bloque2{
+        width: 100%; 
+    }
+
+    .gallery {
+        gap: 0;
+    }
+    .gallery a {    
+       width: 100%;
+       margin-bottom: 40px;
+    }
+
+
+}

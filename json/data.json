@@ -1,0 +1,291 @@
+{
+    "perros": [
+        {
+            "nombre": "Pinya",
+            "urgente": " ",
+            "edad": "16 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal02.jpg"
+        }, 
+
+        {
+            "nombre": "Mon Cheri",
+            "urgente": "URGENTE ",
+            "edad": "10 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal01.jpg"
+        }, 
+
+        {
+            "nombre": "Sara",
+            "urgente": " ",
+            "edad": "7 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal03.jpg"
+        }, 
+
+        {
+            "nombre": "Kala",
+            "urgente": " ",
+            "edad": "2 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal04.jpg"
+        }, 
+
+        {
+            "nombre": "Piere",
+            "urgente": " ",
+            "edad": "2 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal05.jpg"
+        }, 
+
+        {
+            "nombre": "París",
+            "urgente": "URGENTE",
+            "edad": "1 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal06.jpg"
+        }, 
+
+        {
+            "nombre": "Nilo",
+            "urgente": " ",
+            "edad": "8 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal07.jpg"
+        }, 
+
+        {
+            "nombre": "Trinca",
+            "urgente": "URGENTE",
+            "edad": "6 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal08.jpg"
+        }, 
+
+        {
+            "nombre": "Antoine",
+            "urgente": " ",
+            "edad": "3 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal09.jpg"
+        }, 
+
+        {
+            "nombre": "Calma",
+            "urgente": "URGENTE",
+            "edad": "10 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal10.jpg"
+        }, 
+
+        {
+            "nombre": "Brutus",
+            "urgente": " ",
+            "edad": "2 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal11.jpg"
+        }, 
+
+        {
+            "nombre": "Bruce",
+            "urgente": " ",
+            "edad": "7 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal12.jpg"
+        }, 
+
+        {
+            "nombre": "Torb",
+            "urgente": "URGENTE",
+            "edad": "3 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal13.jpg"
+        },
+
+        {
+            "nombre": "Nora",
+            "urgente": " ",
+            "edad": "10 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal14.jpg"
+        },
+
+        {
+            "nombre": "Mint",
+            "urgente": " ",
+            "edad": "10 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal15.jpg"
+        },
+
+        {
+            "nombre": "Protos",
+            "urgente": " ",
+            "edad": "12 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal16.jpg"
+        },
+
+        {
+            "nombre": "Rita",
+            "urgente": " ",
+            "edad": "10 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal17.jpg"
+        },
+
+        {
+            "nombre": "Cookie",
+            "urgente": "URGENTE",
+            "edad": "10 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal18.jpg"
+        },
+
+        {
+            "nombre": "Pepo",
+            "urgente": " ",
+            "edad": "3 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal19.jpg"
+        },
+
+        {
+            "nombre": "Pistón",
+            "urgente": " ",
+            "edad": "8 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal20.jpg"
+        },
+
+        {
+            "nombre": "Robot",
+            "urgente": " ",
+            "edad": "4 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal21.jpg"
+        },
+
+        {
+            "nombre": "Deli",
+            "urgente": " ",
+            "edad": "10 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal22.jpg"
+        },
+
+        {
+            "nombre": "Nispero",
+            "urgente": " ",
+            "edad": "5 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal23.jpg"
+        },
+
+        {
+            "nombre": "Gregor",
+            "urgente": " ",
+            "edad": "2 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal24.jpg"
+        },
+
+        {
+            "nombre": "Pintor",
+            "urgente": " ",
+            "edad": "10 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal25.jpg"
+        },
+
+        {
+            "nombre": "Police",
+            "urgente": " ",
+            "edad": "9 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal26.jpg"
+        },
+
+        {
+            "nombre": "Linda",
+            "urgente": " ",
+            "edad": "2 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal27.jpg"
+        },
+
+        {
+            "nombre": "Lana",
+            "urgente": " ",
+            "edad": "6 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal28.jpg"
+        },
+
+        {
+            "nombre": "Popcorn",
+            "urgente": " ",
+            "edad": "5 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal29.jpg"
+        },
+
+        {
+            "nombre": "Help",
+            "urgente": "URGENTE",
+            "edad": "10 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal30.jpg"
+        },
+
+        {
+            "nombre": "Heidi",
+            "urgente": " ",
+            "edad": "3 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal31.jpg"
+        },
+
+        {
+            "nombre": "Nit",
+            "urgente": " ",
+            "edad": "4 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal32.jpg"
+        },
+
+        {
+            "nombre": "Claus",
+            "urgente": " ",
+            "edad": "10 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal33.jpg"
+        },
+
+        {
+            "nombre": "Indi",
+            "urgente": " ",
+            "edad": "4 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal34.jpg"
+        },
+
+        {
+            "nombre": "Smile",
+            "urgente": " ",
+            "edad": "6 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal35.jpg"
+        },
+
+        {
+            "nombre": "Phoebe",
+            "urgente": " ",
+            "edad": "7 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal36.jpg"
+        }
+    ]
+}

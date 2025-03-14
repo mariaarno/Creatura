@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Galeria todos</title>
+
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles-galeria-todos.css">
+        <link rel="stylesheet" href="css/responsive.css">
+
+        <!--Vue.js-->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <!-- PWA Manifest-->
+        <link rel="manifest" href="manifest.json">
+    </head>
+
+    <body>
+        <!--NavBar-->
+        <div class="nav-desktop">
+            <header class="main-header">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo/logo2_bn.svg" width="100" alt="logo"></a>
+                </div>
+                <div class="nav-container">
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="adoptar.html">Adoptar</a></li>
+                            <li><a href="#">Como ayudar</a></li>
+                            <li><a href="#">Refugios</a></li>
+                            <li><a href="#">Encontrados</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <!--Menú hamburguesa-->
+        <div id="app">
+            <header class="main-header">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo/logo_01.svg" width="70" alt="Logo"></a>
+                </div>
+                
+                    <div class="burger" @click="toggleMenu">
+                        <img src="img/iconos/menu.svg" width="50" alt="Menú">
+                    </div>
+
+                <nav v-if="menu_abierto" class="menu">
+                    <a href="index.html">Inicio</a>
+                    <a href="adoptar.html">Adoptar</a>
+                    <a href="#">Cómo ayudar</a>
+                    <a href="#">Refugios</a>
+                    <a href="#">Encontrados</a>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+
+            <!-- Botones adoptar -->
+
+            <nav class="botones-adoptar">
+                <ul>
+                    <li ><a href="adoptar.html" class="adoptar-activo">Adoptar</a></li>
+                    <li><a href="filtros.html">Filtros</a></li>
+                    <li><a href="galeria-todos.html">Ver todos</a></li>
+                    <li><a href="favoritos.html"><i class="bi bi-heart"></i></a></li>
+                </ul>
+            </nav>
+
+            <!--Galeria-->
+            <div id="app1">
+
+                <section id="gallery" class="gallery">
+
+                    <a v-for="perro in datos.perros" :key="perro.nombre" href="ficha-tecnica.html">
+                        <img :src="perro.imagen" :alt="perro.nombre">
+                        <div class="heart-icon2 liked" onclick="toggleLike(this)">&#9829;</div>
+                        <div class="info-perro">
+                            <div class="nombre-perro">
+                                <h1>{{ perro.nombre }}</h1>
+                                <div class="urgente">{{ perro.urgente }}</div>
+                            </div>
+                            <div class="info-detalle">
+                                <div class="info-perro-gallery">{{ perro.edad }}</div>
+                                <div class="info-perro-gallery">{{ perro.sexo }}</div>
+                            </div>
+                        </div>
+                    </a>
+                </section>        
+            </div>
+        </div>
+
+
+        <!--Footer-->
+        <footer class="main-footer">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo/logo_b.svg" width="100" alt="logo"></a>
+            </div>
+            <nav class="botones-footer">
+                <ul>
+                    <li><a href="#">Nota legal</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </nav>
+        </footer>
+
+        <script>
+            const app1 = Vue.createApp({
+                data() {
+                    return {
+                        datos: {}
+                    }
+                },
+                mounted() {
+                    fetch('/json/data-favoritos.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data);
+                            this.datos = data;
+                        } )
+                        .catch(error => {
+                            console.log('Error loading data-favoritos.json:', error);
+                        });
+                }
+            })
+            app1.mount('#app1')
+        </script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="js/app.js"></script> 
+        <script defer src="js/script.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adoptar</title>
+
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles-adoptar.css">
+        <link rel="stylesheet" href="css/responsive.css">
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <!-- PWA Manifest-->
+        <link rel="manifest" href="manifest.json">
+    </head>
+
+    <body>
+        <!--NavBar-->
+        <div class="nav-desktop">
+            <header class="main-header">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo/logo2_bn.svg" width="100" alt="logo"></a>
+                </div>
+                <div class="nav-container">
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="adoptar.html">Adoptar</a></li>
+                            <li><a href="#">Como ayudar</a></li>
+                            <li><a href="#">Refugios</a></li>
+                            <li><a href="#">Encontrados</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>
+
+        <!--Menú hamburguesa-->
+        <div id="app">
+            <header class="main-header">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo/logo_01.svg" width="70" alt="Logo"></a>
+                </div>
+                
+                    <div class="burger" @click="toggleMenu">
+                        <img src="img/iconos/menu.svg" width="50" alt="Menú">
+                    </div>
+
+                <nav v-if="menu_abierto" class="menu">
+                    <a href="index.html">Inicio</a>
+                    <a href="adoptar.html">Adoptar</a>
+                    <a href="#">Cómo ayudar</a>
+                    <a href="#">Refugios</a>
+                    <a href="#">Encontrados</a>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <!--Botones Adoptar-->
+            <nav class="botones-adoptar">
+                <ul>
+                    <li><a href="adoptar.html" class="adoptar-activo">Adoptar</a></li>
+                    <li><a href="filtros.html">Filtros</a></li>
+                    <li><a href="galeria-todos.html">Ver todos</a></li>
+                    <li><a href="favoritos.html"><i class="bi bi-heart"></i></a></li>
+                </ul>
+            </nav>
+
+            <!--Fotos-Hero-->
+            
+                <div class="gallery-adoptar">
+                    <div class="gallery-item large"><img src="img/animals/5_.jpg" alt="Imagen 1"></div>
+                    <div class="gallery-item medium"><img src="img/animals/1_home.jpg" alt="Imagen 2"></div>
+                    <div class="gallery-item small"><img src="img/animals/6_.jpg" alt="Imagen 3"></div>
+                </div>
+
+            <!--Info adoptar-->
+            <section class="texto-adoptar">
+                <h2>Adoptar</h2>
+                <div class="contenedor-texto">
+                    <p>
+                        <mark>Cada año, millones de animales en todo el mundo </mark>terminan en refugios, esperando una segunda oportunidad para tener un hogar. Adoptar en lugar de comprar no solo cambia la vida del animal que recibe un hogar, sino que también impacta positivamente en la sociedad y en quienes deciden dar este paso con amor y responsabilidad.
+                        
+                        <br><br>Uno de los principales beneficios de la adopción es que salva vidas, muchos refugios están saturados y no pueden albergar a todos los animales indefinidamente. Con la adopción se libera espacio para otros que también necesitan ayuda. Los animales de los refugios han sido abandonados o rescatados de situaciones difíciles, por lo que <mark>darles una familia significa ofrecerles una nueva oportunidad para ser felices.</mark> Al adoptar, se contribuye a reducir la demanda de estos negocios y se fomenta una cultura de respeto hacia los animales.<br> <br>
+                    </p>
+                    <p>
+                        Además, adoptar ayuda a combatir el problema de los animales en situación de calle. Muchos perros y gatos sin hogar enfrentan hambre, enfermedades y peligros constantes. A través de la adopción, se les brinda un entorno seguro y saludable, mejorando significativamente su calidad de vida. <mark>És una experiencia enriquecedora para las personas, </mark> los animales adoptados suelen mostrar una gratitud infinita y crean lazos profundos con sus nuevos dueños. Su amor incondicional y lealtad pueden traer felicidad, compañía y bienestar emocional a quienes los acogen. <br><br>
+                        <mark>Adoptar es un acto de amor y responsabilidad.</mark> Antes de comprar, considera visitar un refugio y darle la oportunidad a un animal que espera con ansias un hogar. No solo estarás salvando una vida, sino que ganarás un amigo fiel para siempre.
+                    </p>
+                </div>
+            </section>
+
+
+            <!--Fichajes estrella-->
+            <h2 class="fichaje-titulo">Fichajes estrella</h2>
+            <div class="fichaje-container">
+                <div class="card-animal">
+                    <a href="ficha-tecnica.html">
+                        <img src="img/animals/ficha/animal02.jpg" alt="Pinya">
+
+                        <div class="card-description">
+                            <div class="info-perro">
+                                <div class="card-title">
+                                    <h1 class="nombre-perro">Pinya</h1>
+                                    <div class="urgente"></div>
+                                </div>
+                                <div class="info-detalle">
+                                    <div class="info-perro-gallery">16 años</div>
+                                    <div class="info-perro-gallery">Hembra</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card-animal">
+                    <a href="ficha-tecnica.html">
+                        <img src="img/animals/ficha/animal22.jpg" alt="Pinya"></a>             <div class="card-description">
+                        <div class="info-perro">
+                            <div class="card-title">
+                                <h1 class="nombre-perro">Deli</h1>
+                                <div class="urgente"></div>
+                            </div>
+                            <div class="info-detalle">
+                                <div class="info-perro-gallery">10 años</div>
+                                <div class="info-perro-gallery">Hembra</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-animal">
+                    <a href="ficha-tecnica.html">
+                        <img src="img/animals/ficha/animal24.jpg" alt="Pinya"></a>              <div class="card-description">
+                        <div class="info-perro">
+                            <div class="card-title">
+                                <h1 class="nombre-perro">Gregor</h1>
+                                <div class="urgente"></div>
+                            </div>
+                            <div class="info-detalle">
+                                <div class="info-perro-gallery">2 años</div>
+                                <div class="info-perro-gallery">Macho</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Porque adoptar-->
+
+            <section class="texto-adoptar2">
+                <h2>¿Porqué es importante adoptar?</h2>
+                <ul>
+                    <li>
+                        <h3>Todos merecen un hogar</h3>
+                        <p>Miles de perros y gatos viven en refugios o en la calle, enfrentando abandono, hambre y peligro. Adoptarles les da una segunda oportunidad.</p>
+                    </li>
+                    
+                    <li>
+                        <h3>Adoptar salva vidas</h3>
+                        <p>Los refugios están sobrepoblados y muchos animales corren el riesgo de ser sacrificados. Al adoptar, les brindas un hogar y permites que los refugios ayuden a más animales.</p>
+                    </li>
+                    
+                    <li>
+                        <h3>Frenar el comercio de animales</h3>
+                        <p>Muchas tiendas y criaderos explotan a los animales en malas condiciones. Adoptar en lugar de comprar ayuda a combatir estas prácticas.</p>
+                    </li>
+                    
+                    <li>
+                        <h3>Reduce el abandono</h3>
+                        <p>Cada adopción significa un animal menos sufriendo en las calles, expuesto al hambre, el frío y los peligros de la vida sin hogar. </p>
+                    </li>
+                    
+                    <li>
+                        <h3>Beneficios emocionalmente</h3>
+                        <p>Tener una mascota mejora la calidad de vida de las personas, ofreciendo compañía, amor incondicional y reduciendo el estrés y la ansiedad.</p>
+                    </li>
+
+                    <li>
+                        <h3>Amor y responsabilidad</h3>
+                        <p>Adoptar cambia la vida del animal y del adoptante, promoviendo un mundo más compasivo y solidario.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!--FaQ-->
+            
+            <section class="faq">
+                <h2>Preguntas Frecuentes</h2>
+                
+                <div class="faq-item">
+                    <input type="checkbox" class="faq-button" id="faq1">
+                    <label for="faq1" class="faq-question">¿Cuáles son los requisitos para adoptar una mascota?</label>
+                    <div class="faq-answer">
+                        <p>
+                            Para adoptar una mascota, es fundamental ser una persona responsable y comprometida con su bienestar. En general, los refugios solicitan:<br><br>
+                            <ul>
+                                <li>Ser mayor de edad y presentar un documento de identificación.</li>
+                                <li>Demostrar estabilidad y condiciones adecuadas para el cuidado del animal.</li>
+                                <li>Firmar un contrato de adopción donde se garantiza el compromiso de proporcionar alimentación, atención veterinaria y un entorno seguro.</li>
+                            </ul><br>
+                            Los requisitos específicos dependen del animal que se quiera adoptar. Algunas mascotas pueden necesitar un hogar sin otros animales, un espacio amplio o cuidados especiales debido a su edad o condición de salud. Antes de la adopción, es posible que el refugio realice una entrevista o una visita al hogar para asegurarse de que la mascota tendrá una buena calidad de vida.
+                        </p>
+                    </div>
+                </div><br>
+            
+                <div class="faq-item">
+                    <input type="checkbox" class="faq-button" id="faq2">
+                    <label for="faq2" class="faq-question">¿Los animales en adopción están vacunados?</label>
+                    <div class="faq-answer">
+                        <p> 
+                            Sí, la mayoría de los refugios entregan a los animales con su cartilla veterinaria al día. Esto significa que suelen estar vacunados, desparasitados y, en muchos casos, esterilizados. La esterilización es clave para evitar la sobrepoblación y fomentar una tenencia responsable. <br><br>
+            
+                            Si la mascota aún no ha sido esterilizada por razones de edad o salud, algunos refugios establecen un compromiso de esterilización que el adoptante debe cumplir una vez sea seguro para el animal. En cualquier caso, antes de la adopción, el refugio te informará sobre el estado de salud de la mascota y cualquier tratamiento adicional que pueda necesitar.
+                        </p>
+                    </div>
+                </div> <br>
+            
+                <div class="faq-item">
+                    <input type="checkbox" class="faq-button" id="faq3">
+                    <label for="faq3" class="faq-question">¿Cómo puedo ayudar si no puedo adoptar?</label>
+                    <div class="faq-answer">
+                        <p>Si en este momento no puedes adoptar, hay muchas maneras de apoyar la causa:
+                            <br><br>
+                            <ul>
+                                <li><strong>Acogida:</strong> Puedes ofrecer un hogar provisional a un animal hasta que encuentre adopción definitiva.</li>
+                                <li><strong>Donaciones:</strong> Los refugios necesitan alimentos, medicinas, mantas y recursos económicos para seguir cuidando a los animales.</li>
+                                <li><strong>Voluntariado:</strong> Ayudar en los refugios, en eventos de adopción o con la difusión en redes sociales puede marcar la diferencia.</li>
+                                <li><strong>Apadrinamiento:</strong> Algunos refugios ofrecen la opción de apadrinar a un animal, contribuyendo a sus cuidados sin necesidad de adoptarlo.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>   
+
+        <!--Footer-->
+        <footer class="main-footer">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo/logo_b.svg" width="100" alt="logo"></a>
+            </div>
+            <nav class="botones-footer">
+                <ul>
+                    <li><a href="#">Nota legal</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </nav>
+        </footer>
+
+        <script defer src="js/script.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="js/app.js"></script>
+
+    </body>
+</html>

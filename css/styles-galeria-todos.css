@@ -1,0 +1,231 @@
+:root {
+    --main-color-1: #243396;
+    --main-color-2: #E2AE3E;
+    --second-color-1: #FFEDAA;
+    --second-color-2: #f3efda;
+    --soft-grey: #C7C7C7;
+    --dark-grey: #878787;
+}
+
+
+.titulo-gallery {
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.gallery a {
+    text-decoration: none;
+    color: black;
+    background: var(--main-color-2);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: block;
+    width: calc( 25% - 30px);
+    position: relative;
+}
+
+.info-perro-gallery {
+    color: black;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: right;
+}
+
+.gallery a:hover {
+    color: white;
+    background: var(--main-color-1);
+
+    .info-perro-gallery {
+        color: white;
+    }    
+
+    .urgente {
+        color: var(--main-color-2);
+    }
+
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+}
+
+.nombre-perro {
+    h1 {
+        margin-bottom: 3px;
+    }
+
+    .urgente {
+       color: white; 
+       text-transform: uppercase;
+    }
+    
+}
+
+.info-perro {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+.main-footer {
+    margin-top: 50px;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.boton-container {
+    position: center;
+}
+
+
+
+
+/* Carrusel fichas */
+.carrusel-fichajes {
+    max-width: 1200px;
+    align-items: center;
+    margin: 150px 200px;
+
+    h2 {
+        margin-bottom: 50px;
+    }
+}
+
+.slider {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.slider-container {
+    display: flex;
+    width: 150%;
+    gap: 20px;
+}
+
+
+/* Estilo general de la ficha */
+.ficha {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.ficha:hover {
+    transform: translateY(-15px);
+}
+
+
+/* Imagen de fondo */
+.ficha-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+/* Capa degradado */
+.ficha-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.ficha:hover .ficha-overlay {
+    opacity: 1;
+}
+
+.info-detalle {
+    color: white;
+    padding: 10px;
+}
+
+.nombre {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* LIKE */
+
+.heart-icon2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+}
+  
+.heart-icon2.liked {
+color: white
+}
+
+
+.boton-form{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 100px 0;
+
+}
+
+/* Filtros */
+
+.filtros-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.filtros {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 60%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

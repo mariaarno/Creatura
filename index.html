@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles-home.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <!--<link rel="stylesheet" href="css/styles-fichajes-estrella.css"> -->
+
+        <!--Swiper-->
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+        <!-- Leaflet JS -->
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+        <!-- Javascrip carrusel -->
+        <!--script src="js/carrusel.js"></script-->
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <!-- PWA Manifest-->
+        <link rel="manifest" href="manifest.json">
+    </head>
+
+    <body>
+        <!--NavBar-->
+        <div class="nav-desktop">
+            <header class="main-header">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo/logo2_bn.svg" width="100" alt="logo"></a>
+                </div>
+                <div class="nav-container">
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="adoptar.html">Adoptar</a></li>
+                            <li><a href="#">Como ayudar</a></li>
+                            <li><a href="#">Refugios</a></li>
+                            <li><a href="#">Encontrados</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>
+
+        <!--Menú hamburguesa-->
+        <div id="app">
+            <header class="main-header">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo/logo_01.svg" width="70" alt="Logo"></a>
+                </div>
+                
+                <div class="burger" @click="toggleMenu">
+                    <img src="img/iconos/menu.svg" width="50" alt="Menú">
+                </div>
+
+                <nav v-if="menu_abierto" class="menu">
+                    <a href="index.html">Inicio</a>
+                    <a href="adoptar.html">Adoptar</a>
+                    <a href="#">Cómo ayudar</a>
+                    <a href="#">Refugios</a>
+                    <a href="#">Encontrados</a>
+                </nav>
+            </header>
+        </div>
+
+        <!--Hero-->
+        <div class="bg-hero">
+                <section class="hero">
+                    <!-- Contenido de texto -->
+                    <div class="hero-content">
+                        <div class="hero-title"><img src="img/logo/logo2_azul.svg" width="400"></div>
+                        <p class="hero-text">
+                            En un mundo donde el abandono y el maltrato animal siguen siendo una triste realidad, <mark>Creatura nace como una respuesta necesaria.</mark> Nuestro objetivo es revolucionar la forma en que las protectoras de animales en España operan, unificando esfuerzos y proporcionando herramientas digitales que optimicen la adopción, el voluntariado y la recaudación de fondos.<br><br>Cada año, <mark>alrededor de 300.000 animales de compañía son abandonados en España.</mark> A pesar de los esfuerzos de muchas organizaciones y voluntarios comprometidos, la falta de recursos y la dispersión de la información dificultan una gestión eficiente. En este contexto, Creatura surge como una solución integral que centraliza y facilita todos los procesos clave, garantizando que cada animal tenga igualdad de oportunidades para encontrar un hogar.
+                        </p>
+
+                    </div>
+
+                <!-- Grid de imágenes corregido -->
+                <div class="hero-grid">
+                    <div class="image large"><img src="img/animals/4_home.jpg" alt="Imagen grande"></div>
+                    <div class="image medium"><img src="img/animals/2_home.jpg" alt="Imagen mediana"></div>
+                    <div class="image small"><img src="img/animals/3_home.jpg" alt="Imagen pequeña"></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="main-container">
+            <!--Objetivos-->
+            <section class="objetivos">
+                <h2>Objetivos</h2>
+                <div class="objetivos-container">
+                    <div class="objetivo" data-texto="Centralizar las protectoras y refugios en una misma plataforma que facilite la colaboración y el intercambio de información. A través de esta plataforma, las organizaciones podrán compartir recursos, coordinarse en tiempo real y mejorar la gestión de adopciones y voluntariado. Al eliminar barreras geográficas y de comunicación, se generará una comunidad unificada con el propósito de mejorar la vida de los animales.">
+                        <div class="circulo" id="circulo1">Conectividad</div>
+                    </div>
+                    <div class="objetivo" data-texto="Crear herramientas digitales intuitivas que permitan a cualquier persona involucrarse con la causa de forma sencilla y eficiente. La plataforma ofrecerá un sistema de búsqueda avanzado para facilitar la adopción responsable, formularios automatizados para agilizar el proceso de inscripción de voluntarios y opciones de donación accesibles. Con un diseño centrado en la experiencia del usuario, garantizaremos que tanto protectoras como adoptantes y colaboradores puedan interactuar de manera rápida y efectiva.">
+                        <div class="circulo" id="circulo2">Accesibilidad</div>
+                    </div>
+                    <div class="objetivo" data-texto="Sensibilizar a la sociedad sobre la importancia del bienestar animal mediante campañas educativas, contenido informativo y espacios de denuncia. A través del blog, las redes sociales y eventos interactivos, difundiremos conocimientos sobre tenencia responsable, legislación vigente y acciones para combatir el abandono. Además, se habilitarán foros donde la comunidad pueda reportar casos de maltrato o abandono, promoviendo así la responsabilidad colectiva en la protección de los animales.">
+                        <div class="circulo" id="circulo3">Concienciación</div>
+                    </div>
+                </div>
+                <div class="objetivo-texto">
+                    <p id="texto-objetivo">Selecciona un objetivo para ver más información.</p>
+                </div>
+            </section>
+
+            <!--Mapa refugios-->
+            <section class="section-container-home">
+                <div class="map-container-home">
+                    <div id="map"></div>
+                </div>
+                <div class="info-container-home">
+                    <h2>Nuestros Refugios</h2>
+                    <p>Descubre nuestros refugios de animales y <br> encuentra a tu próximo compañero.</p>
+                    <button class="btn">Ver más</button>
+                </div>
+            </section>
+
+            <!-- Fichajes estrella -->
+            <h2 class="fichaje-titulo">Fichajes estrella</h2>
+            <div class="fichaje-container">
+                <div class="card-animal">
+                    <a href="ficha-tecnica.html">
+                        <img src="img/animals/ficha/animal02.jpg" alt="Pinya">
+                        <div class="card-description">
+                            <div class="info-perro">
+                                <div class="card-title">
+                                    <h1 class="nombre-perro">Pinya</h1>
+                                    <div class="urgente"></div>
+                                </div>
+                                <div class="info-detalle">
+                                    <div class="info-perro-gallery">16 años</div>
+                                    <div class="info-perro-gallery">Hembra</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card-animal">
+                    <a href="ficha-tecnica.html">
+                        <img src="img/animals/ficha/animal22.jpg" alt="Pinya"></a>
+                        <div class="card-description">
+                        <div class="info-perro">
+                            <div class="card-title">
+                                <h1 class="nombre-perro">Deli</h1>
+                                <div class="urgente"></div>
+                            </div>
+                            <div class="info-detalle">
+                                <div class="info-perro-gallery">10 años</div>
+                                <div class="info-perro-gallery">Hembra</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-animal">
+                    <a href="#">
+                        <img src="img/animals/ficha/animal24.jpg" alt="Pinya"></a>
+                        <div class="card-description">
+                        <div class="info-perro">
+                            <div class="card-title">
+                                <h1 class="nombre-perro">Gregor</h1>
+                                <div class="urgente"></div>
+                            </div>
+                            <div class="info-detalle">
+                                <div class="info-perro-gallery">2 años</div>
+                                <div class="info-perro-gallery">Macho</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Historias que dejan huella-->
+        <div class="bg-historias-huella">
+            <div class="historias-huella">
+                <h2>Historias que dejan huella</h2>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/animals/huella/mango_01.JPG" alt="pinya"></div>
+                        <div class="swiper-slide"><img src="img/animals/huella/mango_03.JPG" alt="pinya"></div>
+                        <div class="swiper-slide"><img src="img/animals/huella/mango_02.JPG" alt="pinya"></div>
+                        <div class="swiper-slide"><img src="img/animals/huella/mango_04.JPG" alt="pinya"></div>
+                    </div>
+                        <div class="swiper-pagination"></div>
+                </div>
+
+                <!-- Initialize Swiper -->
+                <script>
+                    var swiper = new Swiper(".mySwiper", {
+                    pagination: {
+                    el: ".swiper-pagination",
+                    },
+                });
+                </script>
+
+                <div>
+                    <h3 class="titulo-historia">Del miedo al amor inquebrantable</h3>
+                    <div class="historia-mango">
+                        <p>Mango llegó al refugio temblando de miedo, después de años de abuso como galgo de caza. Había sido abandonado cuando ya no servía, y no dejaba que nadie se acercara. Su miedo era tan grande que huía al menor intento de contacto humano.
+                        <br>
+                        <br>
+                        Maria, una joven voluntaria, decidió no rendirse con él. Día tras día, se sentaba cerca, hablándole con calma y paciencia, sin presionarlo. Poco a poco, Mango comenzó a confiar. Primero permitió que lo acariciaran, luego empezó a caminar junto a ella, y finalmente, le dio su corazón.</p>
+                        
+                        <p>Hoy, Mango es un perro feliz. Corre por los parques, duerme tranquilo junto a Maria y ambos son inseparables. La conexión que tienen es prueba de que, con amor y paciencia, los animales pueden superar su pasado y encontrar la felicidad. </p>
+                    </div>
+                </div>
+            </div>
+        </div>   
+
+        <!--Footer-->
+        <footer class="main-footer">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo/logo_b.svg" width="100" alt="logo"></a>
+            </div>
+            <nav class="botones-footer">
+                <ul>
+                    <li><a href="#">Nota legal</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </nav>
+        </footer>
+
+    
+        <script defer src="js/script.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

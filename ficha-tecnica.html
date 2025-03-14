@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fitcha técnica</title>
+
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles-fichatecnica.css">
+        <link rel="stylesheet" href="css/responsive.css">
+
+
+        <script defer src="js/mapa-apag.js"></script>
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+        <!-- Leaflet JS -->
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+        <!-- Javascrip carrusel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="js/carrusel.js">
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <!-- PWA Manifest-->
+        <link rel="manifest" href="manifest.json">
+    </head>
+
+    <body>
+
+        <!--NavBar-->
+        <div class="nav-desktop">
+            <header class="main-header">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo/logo2_bn.svg" width="100" alt="logo"></a>
+                </div>
+                <div class="nav-container">
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="adoptar.html">Adoptar</a></li>
+                            <li><a href="#">Como ayudar</a></li>
+                            <li><a href="#">Refugios</a></li>
+                            <li><a href="#">Encontrados</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <!--Menú hamburguesa-->
+        <div id="app">
+            <header class="main-header">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo/logo_01.svg" width="70" alt="Logo"></a>
+                </div>
+                
+                <div class="tools-container">
+                    <div class="burger" @click="toggleMenu">
+                        <img src="img/iconos/menu.svg" width="50" alt="Menú">
+                    </div>
+                </div>
+
+                <nav v-if="menu_abierto" class="menu">
+                    <a href="index.html">Inicio</a>
+                    <a href="adoptar.html">Adoptar</a>
+                    <a href="#">Cómo ayudar</a>
+                    <a href="#">Refugios</a>
+                    <a href="#">Encontrados</a>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <!--Carrusel fotos animal-->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/animals/ficha/pinya/pinya01.jpg" alt="pinya"></div>
+                    <div class="swiper-slide"><img src="img/animals/ficha/pinya/pinya02.jpg" alt="pinya"></div>
+                    <div class="swiper-slide"><img src="img/animals/ficha/pinya/pinya03.jpg" alt="pinya"></div>
+                    <div class="swiper-slide"><img src="img/animals/ficha/pinya/pinya04.jpg" alt="pinya"></div>
+                    <div class="swiper-slide"><img src="img/animals/ficha/pinya/pinya05.jpg" alt="pinya"></div>
+                </div>
+                    <div class="swiper-pagination"></div>
+            </div>
+
+                <!-- Swiper JS -->
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+                <!-- Initialize Swiper -->
+                <script>
+                    var swiper = new Swiper(".mySwiper", {
+                    pagination: {
+                    el: ".swiper-pagination",
+                    },
+                });
+                </script>
+
+            <!--info + Descripción-->
+            <div class="informacion">
+                <div class="info-principal">
+                    <div class="nombre-lugar">
+                    <h1>Pinya</h1>
+                    <h4>Granollers</h4>
+                    </div>
+
+                    <div class="iconos-share-like">
+                        <div><i class="bi bi-share"></i></div>
+                        <div><i class="bi bi-heart"></i></div>
+                    </div>
+                </div>
+
+                <div class="grupo-etiquetas">
+                    <div class="tags-info">
+                        <div class="tag">Canina</div>
+                        <div class="tag">Hembra</div>
+                        <div class="tag">16 años</div>
+                        <div class="tag">Border Collie</div>
+                        <div class="tag">25 kg</div>
+                        <div class="tag">Mediano</div>
+                        <div class="tag">Cariñosa</div>
+                </div>
+                
+            </div>
+
+                <h2 class="descripcion-animal">Descripción</h2>
+                <div class="texto-descripcion">
+                    <div>
+                        <p>Pinya es una Border Collie de pelaje casi negro, con algunas manchas blancas que resaltan su elegante apariencia. Es increíblemente cariñosa y siempre busca estar en compañía, siguiéndote a donde vayas con su mirada atenta y su cola en movimiento. Su personalidad sociable la hace perfecta para convivir con otros animales, desde gatos hasta caballos, con los que se lleva de maravilla. Adora a los niños y disfruta jugar con ellos, mostrando una paciencia y ternura inigualables. </p>
+                    </div>
+                    <div>
+                        <p>Su energía parece infinita, siempre lista para correr, saltar y aprender nuevos trucos. Los largos paseos y los juegos de agilidad son su pasión, pero también sabe relajarse junto a su familia. Le encanta recibir caricias y responde con lametazos llenos de afecto. Inteligente y leal, Luna es mucho más que una mascota: es una amiga inseparable.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Localización-->
+
+                <section class="section-container-ficha">
+                    <h2>¿Dónde se encuentra?</h2>
+                    <div class="map-container-ficha">
+                        <div id="map"></div>
+                    </div>
+                    <div class="info-container-ficha">
+                        <h3 class="nombre-protectora">APAG</h3>
+                        <div class="texto-prote">
+                            <p>La <strong>Associació Protectora d'Animals de Granollers (APAG)</strong> rescata, cuida y busca hogar para animales abandonados. Proporciona refugio, atención veterinaria, gestiona colonias felinas con programas de esterilización y promueve la sensibilización sobre el maltrato animal.</p>
+                            <p>Se puede colaborar mediante adopciones, voluntariado, donaciones y acogidas.</p>
+                            <p>Su refugio está en C/ Severo Ochoa 103-105, Granollers, Barcelona, Cataluña.</p>
+                        </div>
+                        <button class="btn" href="https://protectoragranollers.org/">Ver más</button>
+                    </div>
+                </section>    
+
+        </div>
+            <!--Formulario-->
+            <section class="section-form">
+
+            <!--<h2>Completa el formulario</h2>-->
+
+            <!--Botones Adoptar-->
+                <nav class="botones-form-adoptar">
+                    <ul>
+                        <li class="adoptar-activo">Adoptar</a></li>
+                        <li class="adoptar-desactivado">Acogida</li>
+                        <li class="adoptar-desactivado">Apadrinar</a></li>
+                    </ul>
+                </nav>
+
+                <form clas="formulario-adopcion" action="">
+                    <div class="formulario-bloque-preguntas">
+                        <div class="formulario-bloque1">
+                            <div>
+                                <label>Nombre</label>
+                                <input class="input-texto" type="text">
+                            </div>
+
+                            <div>
+                                <label>Teléfono</label>
+                                <input class="input-texto"  type="tel">
+                            </div>
+
+                            <div>
+                                <label >Correo electrónico</label>
+                                <input class="input-texto"  type="email" name="" id="">
+                            </div>
+
+                            <div class="pregunta-selector">
+                                <label for="vivienda">Tipo de vivienda</label>
+                                <br>
+                                <br>
+                                <input type="radio" name="vivienda" value="Piso sin exterior">Piso sin exterior
+                                <br>
+                                <input type="radio" name="vivienda" value="Piso con terraza">Piso con terraza
+                                <br>
+                                <input type="radio" name="vivienda" value="Casa sin exterior">Casa sin exterior
+                                <br>
+                                <input type="radio" name="vivienda" value="Casa con patio">Casa con patio
+                                <br>
+                                <input type="radio" name="vivienda" value="Casa con terreno">Casa con terreno
+
+                            </div>
+
+                            <div>
+                                <label>¿Cuantos adultos hay en casa?</label>
+                                <input class="input-texto"  type="text" name="adultos" id="">
+                            </div>
+
+                            <div>
+                                <label>¿Convivira con menores, cuántos?</label>
+                                <input  class="input-texto"  type="text" name="adultos" id="">
+                            </div>
+                        </div>
+
+                        <div class="formulario-bloque2">
+                            <div>
+                                <label>¿Convivira con otros animales, cuáles?</label>
+                                <input class="input-texto"  type="text" name="adultos" id="">
+                            </div>
+
+                            <div class="pregunta-selector">
+                                <label for="soledad">¿Cuántas horas al día estás fuera de casa?</label>
+                                <br>
+                                <br>
+                                <input type="radio" name="horas" value="+5">+5
+                                <br>
+                                <input type="radio" name="horas" value="+8">+8
+                                <br>
+                                <input type="radio" name="horas" value="+10">+10
+                            </div>
+
+                            <div class="pregunta-selector">
+                                <label for="experiencia">¿Es tu primera experiéncia con mascotas?</label>
+                                <br>
+                                <br>
+                                <input type="radio" name="experiencia" value="Si">Si
+                                <br>
+                                <input type="radio" name="experiencia" value="No">No
+                            </div>
+
+                            <div>
+                                <label for="comentario">Cuentanos más cosas sobre ti:</label>
+                                <textarea class="comentario" name="comentario" id="comentario"></textarea>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div class="boton-form">
+                        <input class="btn" type="submit" name="submit" value="Enviar formulario">
+                    </div>
+
+                </form>
+
+            </section>
+
+        <!--Footer-->
+        <footer class="main-footer">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo/logo_b.svg" width="100" alt="logo"></a>
+            </div>
+            <nav class="botones-footer">
+                <ul>
+                    <li><a href="#">Nota legal</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </nav>
+        </footer>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="js/app.js"></script>
+
+    </body>
+</html>

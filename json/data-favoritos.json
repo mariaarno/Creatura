@@ -1,0 +1,66 @@
+{
+    "perros": [
+
+        {
+            "nombre": "Pinya",
+            "urgente": " ",
+            "edad": "16 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal02.jpg"
+        }, 
+
+
+        {
+            "nombre": "París",
+            "urgente": "URGENTE",
+            "edad": "1 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal06.jpg"
+        }, 
+
+        {
+            "nombre": "Bruce",
+            "urgente": " ",
+            "edad": "7 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal12.jpg"
+        }, 
+
+        {
+            "nombre": "Nora",
+            "urgente": " ",
+            "edad": "10 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal14.jpg"
+        },
+
+        {
+            "nombre": "Pistón",
+            "urgente": " ",
+            "edad": "8 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal20.jpg"
+        },
+
+        {
+            "nombre": "Deli",
+            "urgente": " ",
+            "edad": "10 años",
+            "sexo": "Hembra",
+            "imagen": "./img/animals/galeria/animal22.jpg"
+        },
+
+        {
+            "nombre": "Smile",
+            "urgente": " ",
+            "edad": "6 años",
+            "sexo": "Macho",
+            "imagen": "./img/animals/galeria/animal35.jpg"
+        }
+    ]
+}
+
+
+
+
+
